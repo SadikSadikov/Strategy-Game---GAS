@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/SGBaseCharacter.h"
-#include "SGPlayerCharacter.generated.h"
+#include "Character/MageCharacter/SGBaseMageCharacter.h"
+#include "SGPlayerWizard.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class STRATEGYGAME_API ASGPlayerCharacter : public ASGBaseCharacter
+class STRATEGYGAME_API ASGPlayerWizard : public ASGBaseMageCharacter
 {
 	GENERATED_BODY()
 	

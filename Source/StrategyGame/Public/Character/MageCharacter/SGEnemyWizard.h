@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/SGBaseCharacter.h"
-#include "SGEnemyCharacter.generated.h"
+#include "Character/MageCharacter/SGBaseMageCharacter.h"
+#include "SGEnemyWizard.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class STRATEGYGAME_API ASGEnemyCharacter : public ASGBaseCharacter
+class STRATEGYGAME_API ASGEnemyWizard : public ASGBaseMageCharacter
 {
 	GENERATED_BODY()
 	

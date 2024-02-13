@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "STBaseCharacter.generated.h"
+#include "SGBaseCharacter.generated.h"
 
 UCLASS()
-class STRATEGYGAME_API ASTBaseCharacter : public ACharacter
+class STRATEGYGAME_API ASGBaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	ASTBaseCharacter();
+	ASGBaseCharacter();
 
 protected:
 	// Called when the game starts or when spawned

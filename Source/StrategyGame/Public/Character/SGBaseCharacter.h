@@ -19,5 +19,10 @@ protected:
 	
 	virtual void BeginPlay() override;
 
+	TObjectPtr<USkeletalMeshComponent> Weapon;
+
+private:
+
+
 
 };

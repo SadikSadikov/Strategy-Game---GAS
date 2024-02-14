@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Character/SGBaseCharacter.h"
+#include "Character/ValBaseCharacter.h"
 
 
-ASGBaseCharacter::ASGBaseCharacter()
+AValBaseCharacter::AValBaseCharacter()
 {
  	
 	PrimaryActorTick.bCanEverTick = false;
@@ -16,7 +16,7 @@ ASGBaseCharacter::ASGBaseCharacter()
 }
 
 
-void ASGBaseCharacter::BeginPlay()
+void AValBaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	

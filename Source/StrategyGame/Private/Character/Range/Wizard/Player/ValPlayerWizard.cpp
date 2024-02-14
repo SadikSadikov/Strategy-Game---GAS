@@ -1,5 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Character/RangeCharacter/SGBaseRangeCharacter.h"
+#include "Character/Range/Wizard/Player/ValPlayerWizard.h"
 

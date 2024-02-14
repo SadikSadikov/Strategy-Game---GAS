@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/RangeCharacter/SGBaseRangeCharacter.h"
-#include "SGEnemyWizard.generated.h"
+#include "GameFramework/PlayerController.h"
+#include "ValPlayerController.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class STRATEGYGAME_API ASGEnemyWizard : public ASGBaseRangeCharacter
+class STRATEGYGAME_API AValPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	

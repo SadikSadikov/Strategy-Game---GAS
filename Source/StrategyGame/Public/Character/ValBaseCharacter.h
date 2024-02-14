@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "SGBaseCharacter.generated.h"
+#include "ValBaseCharacter.generated.h"
 
 UCLASS(Abstract)
-class STRATEGYGAME_API ASGBaseCharacter : public ACharacter
+class STRATEGYGAME_API AValBaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	
-	ASGBaseCharacter();
+	AValBaseCharacter();
 
 protected:
 	

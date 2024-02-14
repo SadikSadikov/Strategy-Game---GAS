@@ -4,12 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
-#include "SGBaseAnimInstance.generated.h"
+#include "ValBaseAnimInstance.generated.h"
 
-class ASGBaseCharacter;
+class AValBaseCharacter;
 
 UCLASS()
-class STRATEGYGAME_API USGBaseAnimInstance : public UAnimInstance
+class STRATEGYGAME_API UValBaseAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
 
@@ -23,7 +23,7 @@ protected:
 private:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Character", meta = (AllowPrivateAccess = "true"))
-	ASGBaseCharacter* Character;
+	AValBaseCharacter* Character;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float GroundSpeed = 0.f;

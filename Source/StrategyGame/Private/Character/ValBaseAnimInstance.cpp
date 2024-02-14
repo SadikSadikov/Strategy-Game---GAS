@@ -1,22 +1,22 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Character/SGBaseAnimInstance.h"
-#include "Character/SGBaseCharacter.h"
+#include "Character/ValBaseAnimInstance.h"
+#include "Character/ValBaseCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
-void USGBaseAnimInstance::NativeInitializeAnimation()
+void UValBaseAnimInstance::NativeInitializeAnimation()
 {
 	Super::NativeInitializeAnimation();
 
-	Character = Cast<ASGBaseCharacter>(TryGetPawnOwner());
+	Character = Cast<AValBaseCharacter>(TryGetPawnOwner());
 }
 
-void USGBaseAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
+void UValBaseAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
 	if (Character == nullptr)
 	{
-		Character = Cast<ASGBaseCharacter>(TryGetPawnOwner());
+		Character = Cast<AValBaseCharacter>(TryGetPawnOwner());
 	}
 
 	if (Character == nullptr) return;

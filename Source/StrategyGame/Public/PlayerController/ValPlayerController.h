@@ -7,6 +7,8 @@
 #include "ValPlayerController.generated.h"
 
 class UInputMappingContext;
+class UInputAction;
+struct FInputActionValue;
 
 UCLASS()
 class STRATEGYGAME_API AValPlayerController : public APlayerController
@@ -21,9 +23,18 @@ protected:
 
 	virtual void BeginPlay() override;
 
+	virtual void SetupInputComponent() override;
+
+
 private:
 
+	UPROPERTY(EditAnywhere, Category = "Input")
 	TObjectPtr<UInputMappingContext> ValContext;
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> MoveAction;
+
+	void Move(const FInputActionValue& ActionValue);
 
 	
 };

@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Abstract)
 class STRATEGYGAME_API AValBaseRange : public AValBaseCharacter
 {
 	GENERATED_BODY()

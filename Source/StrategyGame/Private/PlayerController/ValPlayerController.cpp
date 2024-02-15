@@ -21,9 +21,12 @@ void AValPlayerController::BeginPlay()
 
 	Subsystem->AddMappingContext(ValContext, 0);
 
+	bShowMouseCursor = true;
+	DefaultMouseCursor = EMouseCursor::Default;
+
 	FInputModeGameAndUI InputMode;
 	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
-	InputMode.SetHideCursorDuringCapture(false);
+	InputMode.SetHideCursorDuringCapture(true);
 	SetInputMode(InputMode);
 
 }

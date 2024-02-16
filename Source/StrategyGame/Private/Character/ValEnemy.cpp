@@ -5,8 +5,10 @@
 
 void AValEnemy::Highlight()
 {
+	bHighlighted = true;
 }
 
 void AValEnemy::UnHighlight()
 {
+	bHighlighted = false;
 }

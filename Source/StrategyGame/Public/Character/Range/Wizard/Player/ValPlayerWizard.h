@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/Range/ValBaseRange.h"
+#include "Character/ValPlayer.h"
 #include "ValPlayerWizard.generated.h"
 
 class USpringArmComponent; 
 class UCameraComponent;
 
 UCLASS()
-class STRATEGYGAME_API AValPlayerWizard : public AValBaseRange
+class STRATEGYGAME_API AValPlayerWizard : public AValPlayer
 {
 	GENERATED_BODY()
 

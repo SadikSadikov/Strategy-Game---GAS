@@ -20,4 +20,6 @@ public:
 	virtual void Highlight() override;
 	virtual void UnHighlight() override;
 	
+	UPROPERTY(BlueprintReadOnly)
+	bool bHighlighted = false;
 };

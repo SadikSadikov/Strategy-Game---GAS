@@ -9,6 +9,7 @@
 class UInputMappingContext;
 class UInputAction;
 struct FInputActionValue;
+class IValEnemyHighlightInterface;
 
 UCLASS()
 class STRATEGYGAME_API AValPlayerController : public APlayerController
@@ -18,6 +19,8 @@ class STRATEGYGAME_API AValPlayerController : public APlayerController
 public:
 
 	AValPlayerController();
+
+	virtual void PlayerTick(float DeltaTime) override;
 
 protected:
 
@@ -34,7 +37,14 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> MoveAction;
 
+	IValEnemyHighlightInterface* LastActor;
+
+	IValEnemyHighlightInterface* ThisActor;
+
+
 	void Move(const FInputActionValue& ActionValue);
+
+	void CursorTrace();
 
 	
 };

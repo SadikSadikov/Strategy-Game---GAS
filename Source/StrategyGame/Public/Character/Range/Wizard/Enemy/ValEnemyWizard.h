@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/Range/ValBaseRange.h"
+#include "Character/ValEnemy.h"
 #include "ValEnemyWizard.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class STRATEGYGAME_API AValEnemyWizard : public AValBaseRange
+class STRATEGYGAME_API AValEnemyWizard : public AValEnemy
 {
 	GENERATED_BODY()
 	

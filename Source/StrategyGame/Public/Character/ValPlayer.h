@@ -6,12 +6,22 @@
 #include "Character/ValBaseCharacter.h"
 #include "ValPlayer.generated.h"
 
-/**
- * 
- */
+class USpringArmComponent;
+class UCameraComponent;
+
 UCLASS()
 class STRATEGYGAME_API AValPlayer : public AValBaseCharacter
 {
 	GENERATED_BODY()
+
+public:
+
+	AValPlayer();
+
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+	USpringArmComponent* CameraBoom;
+
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+	UCameraComponent* Camera;
 	
 };

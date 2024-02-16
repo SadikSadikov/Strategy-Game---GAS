@@ -6,8 +6,6 @@
 #include "Character/ValPlayer.h"
 #include "ValPlayerWizard.generated.h"
 
-class USpringArmComponent; 
-class UCameraComponent;
 
 UCLASS()
 class STRATEGYGAME_API AValPlayerWizard : public AValPlayer
@@ -21,13 +19,6 @@ public:
 protected:
 
 private:
-
-	UPROPERTY(VisibleAnywhere, Category = "Camera")
-	USpringArmComponent* CameraBoom;
-
-	UPROPERTY(VisibleAnywhere, Category = "Camera")
-	UCameraComponent* Camera;
-
 
 	
 };

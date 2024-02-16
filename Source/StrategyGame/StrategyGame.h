@@ -4,3 +4,5 @@
 
 #include "CoreMinimal.h"
 
+#define CUSTOM_DEPTH_STENCIL_BLUE 250
+

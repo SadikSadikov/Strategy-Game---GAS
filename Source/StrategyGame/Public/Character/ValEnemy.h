@@ -17,9 +17,9 @@ class STRATEGYGAME_API AValEnemy : public AValBaseCharacter, public IValEnemyHig
 
 public:
 
+	AValEnemy();
+
 	virtual void Highlight() override;
 	virtual void UnHighlight() override;
 	
-	UPROPERTY(BlueprintReadOnly)
-	bool bHighlighted = false;
 };

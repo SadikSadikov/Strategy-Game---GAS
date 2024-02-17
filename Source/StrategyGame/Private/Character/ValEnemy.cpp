@@ -12,6 +12,7 @@ AValEnemy::AValEnemy()
 
 	AbilitySystemComp = CreateDefaultSubobject<UValAbilitySystemComponent>("AbilitySytemComponent");
 	AbilitySystemComp->SetIsReplicated(true);
+	AbilitySystemComp->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
 
 	AttributeSet = CreateDefaultSubobject<UValAttributeSet>("Attribute Set");
 }

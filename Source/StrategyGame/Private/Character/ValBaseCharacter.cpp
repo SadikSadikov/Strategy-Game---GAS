@@ -15,6 +15,10 @@ AValBaseCharacter::AValBaseCharacter()
 
 }
 
+UAbilitySystemComponent* AValBaseCharacter::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComp;
+}
 
 void AValBaseCharacter::BeginPlay()
 {

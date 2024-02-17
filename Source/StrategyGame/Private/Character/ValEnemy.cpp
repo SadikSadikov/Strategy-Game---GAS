@@ -3,10 +3,17 @@
 
 #include "Character/ValEnemy.h"
 #include "StrategyGame/StrategyGame.h"
+#include "AbilitySystem/ValAbilitySystemComponent.h"
+#include "AbilitySystem/ValAttributeSet.h"
 
 AValEnemy::AValEnemy()
 {
 	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Block);
+
+	AbilitySystemComp = CreateDefaultSubobject<UValAbilitySystemComponent>("AbilitySytemComponent");
+	AbilitySystemComp->SetIsReplicated(true);
+
+	AttributeSet = CreateDefaultSubobject<UValAttributeSet>("Attribute Set");
 }
 
 void AValEnemy::Highlight()

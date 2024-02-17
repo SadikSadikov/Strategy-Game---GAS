@@ -19,7 +19,13 @@ public:
 
 	AValEnemy();
 
+	/* Begin Highligh Interface */
 	virtual void Highlight() override;
 	virtual void UnHighlight() override;
+	/* End Highligh Interface */
+
+protected:
+
+	virtual void BeginPlay() override;
 	
 };

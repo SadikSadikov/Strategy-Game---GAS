@@ -17,6 +17,13 @@ AValEnemy::AValEnemy()
 	AttributeSet = CreateDefaultSubobject<UValAttributeSet>("Attribute Set");
 }
 
+void AValEnemy::BeginPlay()
+{
+	Super::BeginPlay();
+
+	AbilitySystemComp->InitAbilityActorInfo(this, this);
+}
+
 void AValEnemy::Highlight()
 {
 	GetMesh()->SetRenderCustomDepth(true);
@@ -31,3 +38,5 @@ void AValEnemy::UnHighlight()
 	GetMesh()->SetRenderCustomDepth(false);
 	Weapon->SetRenderCustomDepth(false);
 }
+
+

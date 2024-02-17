@@ -5,6 +5,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "PlayerController/ValPlayerState.h"
+#include "AbilitySystem/ValAbilitySystemComponent.h"
+#include "AbilitySystem/ValAttributeSet.h"
 
 AValPlayer::AValPlayer()
 {
@@ -33,4 +36,27 @@ AValPlayer::AValPlayer()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
+}
+
+void AValPlayer::PossessedBy(AController* NewController)
+{
+	/* Init Ability Actor Info for Server */
+	InitAbilityActorInfo();
+}
+
+
+void AValPlayer::OnRep_PlayerState()
+{
+	/* Init Ability Actor Info for Client */
+	InitAbilityActorInfo();
+}
+
+void AValPlayer::InitAbilityActorInfo()
+{
+	AValPlayerState* ValPlayerState = GetPlayerState<AValPlayerState>();
+	check(ValPlayerState);
+
+	ValPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(ValPlayerState, this);
+	AbilitySystemComp = ValPlayerState->GetAbilitySystemComponent();
+	AttributeSet = ValPlayerState->GetAttributeSet();
 }

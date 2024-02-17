@@ -18,6 +18,12 @@ public:
 
 	AValPlayer();
 
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState();
+
+
+protected:
+
 	UPROPERTY(VisibleAnywhere, Category = "Camera")
 	USpringArmComponent* CameraBoom;
 

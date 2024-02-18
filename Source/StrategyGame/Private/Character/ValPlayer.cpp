@@ -40,6 +40,7 @@ AValPlayer::AValPlayer()
 
 void AValPlayer::PossessedBy(AController* NewController)
 {
+	Super::PossessedBy(NewController);
 	/* Init Ability Actor Info for Server */
 	InitAbilityActorInfo();
 }
@@ -47,6 +48,7 @@ void AValPlayer::PossessedBy(AController* NewController)
 
 void AValPlayer::OnRep_PlayerState()
 {
+	Super::OnRep_PlayerState();
 	/* Init Ability Actor Info for Client */
 	InitAbilityActorInfo();
 }
